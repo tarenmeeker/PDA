@@ -1,4 +1,11 @@
-public class Yahtzee
+
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class YahtzeeTest
 {
     private Die6 die1;
     private Die6 die2;
@@ -6,7 +13,7 @@ public class Yahtzee
     private Die6 die4;
     private Die6 die5;
     
-    public Yahtzee() {
+    public YahtzeeTest() {
         this.die1 = new Die6();
         this.die2 = new Die6();
         this.die3 = new Die6();
@@ -22,7 +29,7 @@ public class Yahtzee
         die4.roll();
         die5.roll();
     }
-    
+
     public void roll(int dieNumber) {
         if (dieNumber == 1) {
             die1.roll();
@@ -36,12 +43,12 @@ public class Yahtzee
             die5.roll();
         }
     }
-    
+
     public String toString() {
-        return die1.getValue() + " " + die2.getValue()
+        return "Dice Values: " + die1.getValue() + " " + die2.getValue()
         + " " + die3.getValue() + " " + die4.getValue() + " " + die5.getValue();
     }
-    
+
     public String summarize() {
         int one = 0;
         int two = 0;
@@ -74,3 +81,4 @@ public class Yahtzee
           + "; 4-" + four + "; 5-" + five + "; 6-" + six;
     }
 }
+
