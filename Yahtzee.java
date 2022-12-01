@@ -7,12 +7,12 @@ public class Yahtzee
     private Die6 die5;
     
     public Yahtzee() {
-        this.die1 = new Die6();
-        this.die2 = new Die6();
-        this.die3 = new Die6();
-        this.die4 = new Die6();
-        this.die5 = new Die6();
-        this.roll();
+        die1 = new Die6();
+        die2 = new Die6();
+        die3 = new Die6();
+        die4 = new Die6();
+        die5 = new Die6();
+        roll();
     }
 
     public void roll() {
@@ -37,7 +37,7 @@ public class Yahtzee
         }
     }
     
-    public String toString() {
+    public String values() {
         return die1.getValue() + " " + die2.getValue()
         + " " + die3.getValue() + " " + die4.getValue() + " " + die5.getValue();
     }
