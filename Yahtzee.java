@@ -12,7 +12,6 @@ public class Yahtzee
         die3 = new Die6();
         die4 = new Die6();
         die5 = new Die6();
-        roll();
     }
 
     public void roll() {
@@ -70,7 +69,7 @@ public class Yahtzee
                 six += 1;
             }
         }
-        return "1-" + one + "; 2-" + two + "; 3-" + three 
+        return "Dice Values: " + "1-" + one + "; 2-" + two + "; 3-" + three 
           + "; 4-" + four + "; 5-" + five + "; 6-" + six;
     }
 }
